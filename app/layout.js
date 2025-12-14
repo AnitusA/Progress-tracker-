@@ -1,8 +1,8 @@
-import './globals.css'
+// import './globals.css' // Temporarily disabled
 
 export const metadata = {
-  title: 'Next.js MongoDB Template',
-  description: 'A simple template with App Router, MongoDB, and shadcn/ui',
+  title: 'Progress Tracker',
+  description: 'A simple progress tracking app with Next.js and Supabase',
 }
 
 export default function RootLayout({ children }) {

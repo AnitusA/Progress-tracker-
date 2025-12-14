@@ -1,3 +1,7 @@
+// TailwindCSS config temporarily disabled due to dependency issues
+// Will be re-enabled once dependencies are properly installed
+
+/*
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     darkMode: ["class"],

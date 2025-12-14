@@ -1,6 +1,6 @@
+// PostCSS config disabled to avoid TailwindCSS dependency
 module.exports = {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
-  }
+  plugins: {
+    autoprefixer: {},
+  },
+}

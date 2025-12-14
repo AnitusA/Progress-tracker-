@@ -1,11 +1,6 @@
 const nextConfig = {
-  output: 'standalone',
   images: {
     unoptimized: true,
-  },
-  experimental: {
-    // Remove if not using Server Components
-    serverComponentsExternalPackages: ['mongodb'],
   },
   webpack(config, { dev }) {
     if (dev) {

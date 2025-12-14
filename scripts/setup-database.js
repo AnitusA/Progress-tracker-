@@ -1,10 +1,20 @@
 // This script sets up the Supabase database tables
 // Run with: node scripts/setup-database.js
+// Make sure to set the environment variables before running:
+// NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY
 
 const { createClient } = require('@supabase/supabase-js')
 
-const SUPABASE_URL = 'https://nqqevivasvdcjffpvylr.supabase.co'
-const SERVICE_ROLE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5xcWV2aXZhc3ZkY2pmZnB2eWxyIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2NDY5ODAxNiwiZXhwIjoyMDgwMjc0MDE2fQ.rYdCIDNPAF5zwAjEus6LXgUINV221FXmKDru_Ew5a_M'
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL
+const SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY
+
+if (!SUPABASE_URL || !SERVICE_ROLE_KEY) {
+  console.error('❌ Missing environment variables. Please check your .env file.')
+  console.error('Required: NEXT_PUBLIC_SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY')
+  console.error('\nYou can load them by running:')
+  console.error('Get-Content .env | ForEach-Object { if($_ -match "^([^=]+)=(.*)$") { [System.Environment]::SetEnvironmentVariable($matches[1], $matches[2], "Process") } }; node scripts/setup-database.js')
+  process.exit(1)
+}
 
 const supabaseAdmin = createClient(SUPABASE_URL, SERVICE_ROLE_KEY)
 
