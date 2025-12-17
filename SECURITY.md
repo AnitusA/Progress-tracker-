@@ -17,8 +17,7 @@ This project uses environment variables to securely store sensitive credentials 
 - **`scripts/setup-database.js`** - Sets up Supabase database tables
 - **`scripts/create-tables.js`** - Alternative script to create tables
 - **`run-setup-database.ps1`** - PowerShell helper to load env vars and run setup
-- **`run-create-tables.ps1`** - PowerShell helper to load env vars and run create tables
-
+- **`run-create-tables.ps1`** - PowerShell helper to load env vars and run create tables in neon with the env commemnts 
 ## Quick Start
 
 ### 1. Set Up Environment Variables
