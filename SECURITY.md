@@ -12,7 +12,7 @@ This project uses environment variables to securely store sensitive credentials 
 - **`.env.example`** - Template with placeholder values (safe to commit)
 - **`.gitignore`** - Ensures `.env` files are not tracked by git
 
-### Database Scripts
+### Database
 
 - **`scripts/setup-database.js`** - Sets up Supabase database tables
 - **`scripts/create-tables.js`** - Alternative script to create tables
